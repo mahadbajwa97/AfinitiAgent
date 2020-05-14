@@ -1,0 +1,60 @@
+AFINITI-TASK-OID DEFINITIONS ::= BEGIN
+
+IMPORTS
+    MODULE-IDENTITY, OBJECT-TYPE, enterprises FROM SNMPv2-SMI
+;
+
+OIDInfo MODULE-IDENTITY
+    LAST-UPDATED "101008100000Z"
+    ORGANIZATION "Afiniti, Inc"
+    CONTACT-INFO    
+         "postal:   afiniti, Karachi, Pakistan
+
+          email:    mahad_bajwa@afiniti.com"
+    DESCRIPTION
+        "This Mib module defines objects for enterprise oid"
+    REVISION     "202005100000Z"
+    DESCRIPTION
+        "Corrected notification example definitions"
+    REVISION     "200202060000Z"
+    DESCRIPTION
+        "Task initiation"
+    ::= { enterprises 53864 }
+
+--
+-- top level structure
+--
+OIDIndex       OBJECT IDENTIFIER ::= { OIDInfo 1 }
+
+--
+-- Example scalars
+--
+
+Version OBJECT-TYPE
+    SYNTAX      OCTET STRING
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+        "the latest value of OID"
+    DEFVAL { "version" }
+    ::= { OIDIndex 1}
+
+Data-Usage-folder OBJECT-TYPE
+    SYNTAX      OCTET STRING
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+        "the latest value of disk value"
+    DEFVAL { "Disk size" }
+    ::= { OIDIndex 2}
+
+POSTgre-query OBJECT-TYPE
+    SYNTAX      OCTET STRING
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION
+        "the latest sign value"
+    DEFVAL { "Signal Value" }
+    ::= { OIDIndex 3}
+
+END

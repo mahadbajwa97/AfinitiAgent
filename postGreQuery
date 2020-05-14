@@ -1,0 +1,6 @@
+#!/bin/bash
+PLACE=".1.3.6.1.4.1.53864.1.3"  # Requested Oid
+
+
+psql -U postgres -d afinititest -W -c "SELECT signalValue FROM snmpSignals
+Where signalTime= (Select MAX(signalTime) from snmpSignals)"
