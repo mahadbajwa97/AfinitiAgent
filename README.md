@@ -129,6 +129,16 @@ Disk Usage:
 
 The output can be achieved using snmpwalk command as well. Any error can be displayed in terminal.
 
+The following command runs the debug mode:
+
+> snmpd -f -Lo -Ducd-snmp/pass
+
+More information can be found here: 
+
+http://www.net-snmp.org/wiki/index.php/Tut:Extending_snmpd_using_shell_scripts
+
+
+
 
 # Other Approaches:
 
